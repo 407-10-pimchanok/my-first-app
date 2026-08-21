@@ -1,7 +1,7 @@
 import time
 import streamlit as st
 
-st.title("⏱️ เกมเติมศัพท์จับเวลา (A2 Level)")
+st.title("⏱️ เกมเติมศัพท์จับเวลา")
 
 # 1. กำหนดค่าเริ่มต้นใน session_state ถ้ายังไม่มี
 if "ans1_val" not in st.session_state:
@@ -29,15 +29,36 @@ def show_result_dialog(ans1, ans2):
     u_ans1 = ans1.strip().lower()
     u_ans2 = ans2.strip().lower()
 
-    # ตรวจข้อ 1 (ศัพท์ A2: travel)
-    if u_ans1 == "travel":
+    # ตรวจข้อ 1
+    if u_ans1 == "apple":
         st.success("✅ ข้อ 1: ถูกต้อง")
         score += 1
     else:
         st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
 
-    # ตรวจข้อ 2 (ศัพท์ A2: market)
-    if u_ans2 == "market":
+    # ตรวจข้อ 2
+    if u_ans2 == "fish":
+        st.success("✅ ข้อ 2: ถูกต้อง")
+        score += 1
+    else:
+        st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
+
+    # ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มตรวจข้อ 3, 4 ตรงนี้
+
+    st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
+
+    if score == 2:
+        st.success("🎉 You win!")
+    else:
+        st.error("💀 You lose!")
+        if u_ans1 == "backpack":
+        st.success("✅ ข้อ 1: ถูกต้อง")
+        score += 1
+    else:
+        st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
+
+    # ตรวจข้อ 2 (blueberry)
+    if u_ans2 == "blueberry":
         st.success("✅ ข้อ 2: ถูกต้อง")
         score += 1
     else:
@@ -70,13 +91,21 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 
 st.divider()
 
-# 3. ช่องรับคำตอบ (เปลี่ยนเป็นคำศัพท์ระดับ A2)
+# 3. ช่องรับคำตอบ (ใช้ value ผูกกับตัวแปรตรงๆ เพื่อสั่งเคลียร์ได้)
 ans1 = st.text_input(
-    "ข้อ 1: I love to `t _ a v _ l` to new countries. ✈️",
+    "ข้อ 1: An `a _ _ l e` a day keeps the doctor away. 🍎",
     value=st.session_state.ans1_val,
 )
 ans2 = st.text_input(
-    "ข้อ 2: She buys fresh food at the local `m _ r k _ t`. 🛒",
+    "ข้อ 2: Cats love to eat `f _ s h`. 🐟",
+    value=st.session_state.ans2_val,
+)
+ans1 = st.text_input(
+    "ข้อ 1: I put my books in my `b _ c k p _ c k`. 🎒",
+    value=st.session_state.ans1_val,
+)
+ans2 = st.text_input(
+    "ข้อ 2: This smoothie is made from fresh `b _ u e b _ r r y`. 🫐",
     value=st.session_state.ans2_val,
 )
 
@@ -101,4 +130,4 @@ if st.session_state.get("is_ended", False):
     show_result_dialog(ans1, ans2)
 
 st.divider()
-st.write("นางสาวพืมพ์ชนก กาไชย เลขที่ 10 ม.4/7")
+st.write("นางสาวดีใจ ยิ้มแย้ม เลขที่ 5 ม.4/5")
