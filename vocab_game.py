@@ -1,7 +1,7 @@
 import time
 import streamlit as st
 
-st.title("⏱️ เกมเติมศัพท์จับเวลา")
+st.title("⏱️ เกมเติมศัพท์จับเวลา (B2 Level)")
 
 # 1. กำหนดค่าเริ่มต้นใน session_state ถ้ายังไม่มี
 if "ans1_val" not in st.session_state:
@@ -29,15 +29,15 @@ def show_result_dialog(ans1, ans2):
     u_ans1 = ans1.strip().lower()
     u_ans2 = ans2.strip().lower()
 
-    # ตรวจข้อ 1 (เปลี่ยนเป็น banana)
-    if u_ans1 == "banana":
+    # ตรวจข้อ 1 (ศัพท์ B2: achieve)
+    if u_ans1 == "achieve":
         st.success("✅ ข้อ 1: ถูกต้อง")
         score += 1
     else:
         st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
 
-    # ตรวจข้อ 2 (เปลี่ยนเป็น bird)
-    if u_ans2 == "bird":
+    # ตรวจข้อ 2 (ศัพท์ B2: predict)
+    if u_ans2 == "predict":
         st.success("✅ ข้อ 2: ถูกต้อง")
         score += 1
     else:
@@ -70,13 +70,13 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 
 st.divider()
 
-# 3. ช่องรับคำตอบ (เปลี่ยนโจทย์และคำใบ้ศัพท์ใหม่)
+# 3. ช่องรับคำตอบ (เปลี่ยนเป็นคำศัพท์ระดับ B2)
 ans1 = st.text_input(
-    "ข้อ 1: Monkeys love to eat `b _ n _ n a`. 🍌",
+    "ข้อ 1: Hard work will help you `a c h _ e v e` your goals. 🎯",
     value=st.session_state.ans1_val,
 )
 ans2 = st.text_input(
-    "ข้อ 2: A `b _ r d` can fly in the sky. 🐦",
+    "ข้อ 2: Experts try to `p _ e d i c t` future weather trends. 🔮",
     value=st.session_state.ans2_val,
 )
 
