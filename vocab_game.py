@@ -28,8 +28,8 @@ def show_result_dialog(ans1, ans2):
 
     u_ans1 = ans1.strip().lower()
     u_ans2 = ans2.strip().lower()
-    u_ans3 = ans1.strip().lower()
-    u_ans4 = ans2.strip().lower()
+    u_ans3 = ans3.strip().lower()
+    u_ans4 = ans4.strip().lower()
 
     # ตรวจข้อ 1
     if u_ans1 == "apple":
