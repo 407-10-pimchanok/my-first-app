@@ -51,7 +51,7 @@ def show_result_dialog(ans1, ans2):
         st.success("🎉 You win!")
     else:
         st.error("💀 You lose!")
-        if u_ans1 == "backpack":
+    if u_ans1 == "backpack":
         st.success("✅ ข้อ 1: ถูกต้อง")
         score += 1
     else:
