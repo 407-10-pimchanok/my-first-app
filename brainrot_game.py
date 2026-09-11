@@ -60,8 +60,7 @@ st.button("🎮 เริ่มเล่นเกม", on_click=reset_game)
 
 # 2. แถบแสดงเวลานับถอยหลัง (ตั้งไว้ที่ 60 วินาที / 1 นาที)
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
-    time_left = int(180
-                - (time.time() - st.session_state.start))
+    time_left = int(180 - (time.time() - st.session_state.start))
 
     if time_left > 0:
         st.error(f"⏳ เหลือเวลา: {time_left} วินาที")
@@ -73,7 +72,7 @@ st.divider()
 
 # 3. ช่องรับคำตอบ (คำถามตัวละครทั้ง 5 พร้อมคำใบ้)
 ans1 = st.text_input(
-    "ข้อ 1: T _ n g  t _ n g  s _ h u r 🔔",
+    "ข้อ 1: t _ n g  t _ n g  s _ h u r 🔔",
     value=st.session_state.ans1_val,
 )
 st.caption("💡 **คำใบ้:** ตัวละครกระบอกไม้ไผ่เคาะปลุกตอนตีสี่ (มีคำว่า tung / sahur)")
@@ -81,7 +80,7 @@ st.caption("💡 **คำใบ้:** ตัวละครกระบอกไ
 st.divider()
 
 ans2 = st.text_input(
-    "ข้อ 2: B _ m b a r d _ r o  c r _ c o d _ l l o 🐊",
+    "ข้อ 2: b _ m b a r d _ r o  c r _ c o d _ l l o 🐊",
     value=st.session_state.ans2_val,
 )
 st.caption("💡 **คำใบ้:** จระเข้เครื่องบินทิ้งระเบิดสุดโหด (มีคำว่า bombardiro / crocodillo)")
@@ -89,7 +88,7 @@ st.caption("💡 **คำใบ้:** จระเข้เครื่องบ
 st.divider()
 
 ans3 = st.text_input(
-    "ข้อ 3: B _ r  b _ r  p a t _ p _ m 🐧",
+    "ข้อ 3: b _ r  b _ r  p a t _ p _ m 🐧",
     value=st.session_state.ans3_val,
 )
 st.caption("💡 **คำใบ้:** ตัวจมูกยาวเดินลุยหิมะสายหนาว (มีคำว่า brr / patapim)")
@@ -97,7 +96,7 @@ st.caption("💡 **คำใบ้:** ตัวจมูกยาวเดิน
 st.divider()
 
 ans4 = st.text_input(
-    "ข้อ 4: T r _ l a l _ r o  t r _ l a l a 🎶",
+    "ข้อ 4: t r _ l a l _ r o  t r _ l a l a 🎶",
     value=st.session_state.ans4_val,
 )
 st.caption("💡 **คำใบ้:** ฉลามใส่รองเท้าวิ่งชิลบนชายหาด (มีคำว่า tralalero / tralala)")
@@ -105,7 +104,7 @@ st.caption("💡 **คำใบ้:** ฉลามใส่รองเท้า
 st.divider()
 
 ans5 = st.text_input(
-    "ข้อ 5: C _ p u c h _ n o  a s s _ s s i n o ☕",
+    "ข้อ 5: c _ p u c h _ n o  a s s _ s s i n o ☕",
     value=st.session_state.ans5_val,
 )
 st.caption("💡 **คำใบ้:** แก้วกาแฟมือนินจาสุดนักฆ่า (มีคำว่า capuchino / assassino)")
