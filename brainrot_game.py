@@ -74,7 +74,7 @@ st.divider()
 # ----------------------------------------------------
 
 # ข้อ 1: Tung tung sahur
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Tung_Tung_Tung_Sahur.jpg/800px-Tung_Tung_Tung_Sahur.jpg", width=200)
+st.image("https://spacebar.th/storage/tung-tung-tung-tung-sahur-meme-SPACEBAR-Hero.jpg", width=200)
 ans1 = st.text_input(
     "ข้อ 1: T _ n g  t _ n g  s _ h u r 🔔",
     value=st.session_state.ans1_val,
