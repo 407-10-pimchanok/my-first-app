@@ -76,7 +76,7 @@ st.divider()
 # ข้อ 1: Tung tung sahur
 st.image(
     "https://spacebar.th/storage/tung-tung-tung-tung-sahur-meme-SPACEBAR-Hero.jpg",
-    width=200,
+    width=250,
 )
 ans1 = st.text_input(
     "ข้อ 1: T _ n g  t _ n g  s _ h u r 🔔",
@@ -86,7 +86,10 @@ ans1 = st.text_input(
 st.divider()
 
 # ข้อ 2: Bombardiro crocodillo
-st.image("https://example.com/bombardiro_crocodillo.jpg", width=200)
+st.image(
+    "https://preview.redd.it/can-someone-tell-me-what-does-even-this-meme-mean-p-s-its-v0-jt4yf9hiznte1.jpeg?auto=webp&s=5544ec2f38d636dbb0ffb6f2fbd65cfb2bd8fb76",
+    width=250,
+)
 ans2 = st.text_input(
     "ข้อ 2: B _ m b a r d _ r o  c r _ c o d _ l l o 🐊",
     value=st.session_state.ans2_val,
@@ -95,7 +98,10 @@ ans2 = st.text_input(
 st.divider()
 
 # ข้อ 3: Brr brr patapim
-st.image("https://example.com/brr_brr_patapim.jpg", width=200)
+st.image(
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_xVOnSByH2i1XjJp78iInU5S4S_LSoo4Rtg&s",
+    width=250,
+)
 ans3 = st.text_input(
     "ข้อ 3: B _ r  b _ r  p a t _ p _ m 🐧",
     value=st.session_state.ans3_val,
@@ -104,7 +110,10 @@ ans3 = st.text_input(
 st.divider()
 
 # ข้อ 4: Tralalero tralala
-st.image("https://example.com/tralalero_tralala.jpg", width=200)
+st.image(
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhInHqWSoG5i5t3Mst0S5a0O9zH22J2l0q_g&s",
+    width=250,
+)
 ans4 = st.text_input(
     "ข้อ 4: T r _ l a l _ r o  t r _ l a l a 🎶",
     value=st.session_state.ans4_val,
@@ -113,7 +122,10 @@ ans4 = st.text_input(
 st.divider()
 
 # ข้อ 5: Capuchino assassino
-st.image("https://example.com/capuchino_assassino.jpg", width=200)
+st.image(
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s5wE4k8Wv5z-O9M1xXvR2A-x8XkL4u4Zfg&s",
+    width=250,
+)
 ans5 = st.text_input(
     "ข้อ 5: C _ p u c h _ n o  a s s _ s s i n o ☕",
     value=st.session_state.ans5_val,
@@ -141,5 +153,4 @@ if st.session_state.get("is_ended", False):
     show_result_dialog(ans1, ans2, ans3, ans4, ans5)
 
 st.divider()
-st.write("กลุ่มที่ 7")
-
+st.write("นางสาวพิมพ์ชนก กาไชย เลขที่ 10 ม.4/7")
