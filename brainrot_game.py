@@ -70,7 +70,7 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 st.divider()
 
 # ----------------------------------------------------
-# 3. ช่องรับคำตอบพร้อมรูปประกอบแต่ละตัวละคร
+# 3. ช่องรับคำตอบพร้อมรูปประกอบแต่ละตัวละคร (ใช้ st.image)
 # ----------------------------------------------------
 
 # ข้อ 1: Tung tung sahur
@@ -138,7 +138,6 @@ st.session_state.ans3_val = ans3
 st.session_state.ans4_val = ans4
 st.session_state.ans5_val = ans5
 
-
 # 4. ปุ่มส่งคำตอบ
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
     if st.button("📥 ส่งคำตอบ"):
@@ -153,4 +152,4 @@ if st.session_state.get("is_ended", False):
     show_result_dialog(ans1, ans2, ans3, ans4, ans5)
 
 st.divider()
-st.write("นางสาวพิมพ์ชนก กาไชย เลขที่ 10 ม.4/7")
+st.write("กลุ่มที่ 7")
