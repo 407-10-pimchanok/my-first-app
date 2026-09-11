@@ -44,7 +44,6 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5):
 
     st.info(f"🏆 ได้คะแนนรวม: {score} / 5 คะแนน")
 
-    # แสดงข้อความประเมินตามคะแนนจริง
     if score == 5:
         st.success("🎉 ว้าววว คุณเก่งมาก! สมเป็นเซียน Brainrot!")
     elif score >= 1:
@@ -58,7 +57,7 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5):
 # ----------------------------------------------------
 st.button("🎮 เริ่มเล่นเกม", on_click=reset_game)
 
-# 2. แถบแสดงเวลานับถอยหลัง (ตั้งไว้ที่ 45 วินาทีสำหรับ 5 ข้อ)
+# 2. แถบแสดงเวลานับถอยหลัง (ตั้งไว้ที่ 45 วินาที)
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
     time_left = int(45 - (time.time() - st.session_state.start))
 
@@ -70,23 +69,48 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 
 st.divider()
 
-# 3. ช่องรับคำตอบ (คำถามตัวละครทั้ง 5)
+# ----------------------------------------------------
+# 3. ช่องรับคำตอบพร้อมรูปประกอบแต่ละตัวละคร
+# ----------------------------------------------------
+
+# ข้อ 1: Tung tung sahur
+st.image("https://example.com/tung_tung_sahur.jpg", width=200)
 ans1 = st.text_input(
     "ข้อ 1: T _ n g  t _ n g  s _ h u r 🔔",
     value=st.session_state.ans1_val,
 )
+
+st.divider()
+
+# ข้อ 2: Bombardiro crocodillo
+st.image("https://example.com/bombardiro_crocodillo.jpg", width=200)
 ans2 = st.text_input(
     "ข้อ 2: B _ m b a r d _ r o  c r _ c o d _ l l o 🐊",
     value=st.session_state.ans2_val,
 )
+
+st.divider()
+
+# ข้อ 3: Brr brr patapim
+st.image("https://example.com/brr_brr_patapim.jpg", width=200)
 ans3 = st.text_input(
     "ข้อ 3: B _ r  b _ r  p a t _ p _ m 🐧",
     value=st.session_state.ans3_val,
 )
+
+st.divider()
+
+# ข้อ 4: Tralalero tralala
+st.image("https://example.com/tralalero_tralala.jpg", width=200)
 ans4 = st.text_input(
     "ข้อ 4: T r _ l a l _ r o  t r _ l a l a 🎶",
     value=st.session_state.ans4_val,
 )
+
+st.divider()
+
+# ข้อ 5: Capuchino assassino
+st.image("https://example.com/capuchino_assassino.jpg", width=200)
 ans5 = st.text_input(
     "ข้อ 5: C _ p u c h _ n o  a s s _ s s i n o ☕",
     value=st.session_state.ans5_val,
@@ -114,4 +138,5 @@ if st.session_state.get("is_ended", False):
     show_result_dialog(ans1, ans2, ans3, ans4, ans5)
 
 st.divider()
-st.write("นางสาวพิมพ์ชนก กาไชย เลขที่ 10 ม.4/7")
+st.write("กลุ่มที่ 7")
+
