@@ -1,7 +1,7 @@
 import time
 import streamlit as st
 
-st.title("⏱️ เกมเติมศัพท์จับเวลา (Brainrot Edition)")
+st.title("⏱️ เกทายตัวละคร (Brainrot Edition)")
 
 # 1. กำหนดค่าเริ่มต้นใน session_state ถ้ายังไม่มี (มี 5 ข้อ)
 for i in range(1, 6):
